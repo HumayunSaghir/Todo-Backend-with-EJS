@@ -9,5 +9,9 @@
     <% if (locals.user) { %>
         <h2>Profile of <%= locals.user.name %>!</h2>
     <% } %>
+
+    <button type="button" class="btn btn-secondary">
+        <a href="/user/logout">Logout</a>
+    </button>
 </body>
 </html>

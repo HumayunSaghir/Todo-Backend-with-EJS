@@ -12,7 +12,7 @@ const app = express()
 const port = 8000
 
 // database connection
-connectDatabase('mongodb://127.0.0.1:27017/userAuthSystem')
+connectDatabase('mongodb://127.0.0.1:27017/todo_backend')
     .then(() => console.log('database connected!'))
     .catch(() => console.log('error in database connection!'))
 
