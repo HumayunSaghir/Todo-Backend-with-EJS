@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1>Taskify</h1>
+
+    <% if (locals.user) { %>
+        <h4>Welcome Back, <%= locals.user.name %></h4>
+    <% } %>
+    
+    <% if (locals.user === undefined) { %>
+        <h4>Please Login or Signup first</h4>
+    <% } %>
+</body>
+</html>

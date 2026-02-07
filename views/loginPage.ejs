@@ -10,30 +10,36 @@
 
 <body>
 
-    <h1>Login</h1>
-
-    <form class="row g-3">
-        <!-- email -->
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
+    <% if (locals.message) { %>
+        <div class="p-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3">
+            <%= locals.message %>
         </div>
+        <% } %>
 
-        <!-- password -->
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-        </div>
+            <h1>Login</h1>
 
-        <!-- signin -->
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
+            <form class="row g-3" method="post" action="/users/login">
+                <!-- email -->
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email" required>
+                </div>
 
-    </form>
+                <!-- password -->
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="password" required>
+                </div>
+
+                <!-- signin -->
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+
+            </form>
 
 
-    <%- include('./partials/script') %>
+            <%- include('./partials/script') %>
 </body>
 
 </html>
