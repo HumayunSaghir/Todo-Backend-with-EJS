@@ -1,0 +1,3 @@
+new request is recieved at /users/login by method GET
+new request is recieved at /favicon.ico by method GET
+new request is recieved at /users/login by method GET
