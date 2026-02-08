@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <%- include('./partials/css') %>
 </head>
 <body>
     <h1>Taskify</h1>
 
     <% if (locals.user) { %>
         <h4>Welcome Back, <%= locals.user.name %></h4>
+        <a href="/profile" class="btn btn-secondary">Profile</a>
     <% } %>
     
     <% if (locals.user === undefined) { %>
-        <h4>Please Login or Signup first</h4>
+        <h4>Please <a href="/users/login">Login</a> or <a href="/users/signup">Signup</a> first</h4>
     <% } %>
 </body>
 </html>

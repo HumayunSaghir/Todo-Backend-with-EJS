@@ -4,6 +4,14 @@ function handleShowHomepage(req, res){
     })
 }
 
+function handleShowProfilePage(req, res){
+    console.log(req.user.name)
+    return res.status(200).render("profile", {
+        user : req.user,
+    })
+}
+
 module.exports = {
     handleShowHomepage,
+    handleShowProfilePage,
 }
